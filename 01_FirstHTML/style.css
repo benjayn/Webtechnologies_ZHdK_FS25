@@ -39,7 +39,7 @@ p {
 }
 
 a {
-    color: rgb(106, 1, 130);
+    color: rgb(238, 190, 0);
     text-decoration: none;
 }
 
@@ -74,7 +74,7 @@ img {
     height: 100%;
     background-color: rgba(0, 255, 0, 0);
     transition: background-color 0.3s ease;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .img-wrapper:hover::after {
