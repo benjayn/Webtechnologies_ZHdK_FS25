@@ -9,26 +9,30 @@
   <link rel="stylesheet" href="style.css">
   <script src="./js/main.js" defer></script>
   <link rel="icon" type="image/png" href="./images/fave_icon.png" />
- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet" />
 
 </head>
 
 <body>
   <div class="slider">
+  <!-- Card 1 -->
   <div class="card active">
     <img class="drink" src="images/moscow_mule_pic.png" alt="Moscow Mule" />
-
     <div class="info-box">
-      <h2>#001 MOSCOW MULE</h2>
-      <p>Raw, real, and drippinˈ with goodness – natureˈs vibe in every sip!</p>
-      <a href="https://www.drinks.ch/de/" target="_blank">Get the recipe here</a>
+      <h2><span>MOSCOW MULE</span><span>#001</span></h2>
+      <a href="https://www.drinks.ch/de/" target="_blank">Get the recipe here:</a>
+      <p>Raw, real, and drippin' with goodness – nature's vibe in every sip!</p>
     </div>
   </div>
 
-  <!-- Weitere Cards... -->
+  <!-- Weitere Cards (Amaretto, Bloody Mary) identisch aufgebaut mit .card -->
 
-  <button class="arrow left"><img src="images/arrow_left.png" alt="Previous" /></button>
-  <button class="arrow right"><img src="images/arrow_right.png" alt="Next" /></button>
+  <!-- Navigation -->
+  <button class="arrow left"><img src="images/arrow_left.png" alt="←" /></button>
+  <button class="arrow right"><img src="images/arrow_right.png" alt="→" /></button>
+
+  <!-- Seitenzähler -->
+  <div class="counter">1 / 3</div>
 </div>
 </body>
 

@@ -21,7 +21,7 @@ body {
 
 .card {
   background-color: #fff;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 25px;
   width: 100%;
   height: 100%;
@@ -29,46 +29,78 @@ body {
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .card.active {
   display: flex;
 }
 
-/* 🥃 Drink-Bild */
 .card .drink {
   width: 100%;
-  margin-top: -20px; /* damit es oben anschneidet */
+  margin-top: 5px;
   z-index: 2;
 }
 
-/* 🔴 Unterer Farbbereich mit Text */
+/* Gelber Infoblock */
 .card .info-box {
-  background-color: rgb(255, 0, 0);
-  padding: 30px 20px;
+  background-color: rgb(255, 190, 0);
+  margin: 20px;
+  padding: 25px 20px;
+  border-radius: 0 0 15px 15px;
+  text-align: left;
   color: white;
-  text-align: center;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
-/* 📝 Titel */
-.card h2 {
+/* Name + Nummer oben */
+.card .info-box .top {
+  display: flex;
+  justify-content: space-between;
   font-weight: 900;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-/* 🧾 Beschreibung */
-.card p {
-  font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 
-/* 🔗 Link */
+/* Rezept-Hinweis mittig */
+.card .info-box .middle {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Claim ganz unten */
+.card .info-box .bottom {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Titel & Nummer */
+.card h2 {
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Beschreibung */
+.card p {
+  font-weight: 300;
+  font-size: 14px;
+  margin: 10px 0 10px;
+  color: white;
+}
+
+/* Link */
 .card a {
   font-weight: 300;
   font-size: 14px;
@@ -76,7 +108,7 @@ body {
   text-decoration: underline;
 }
 
-/* ◀️▶️ Pfeile */
+/* Pfeile */
 .arrow {
   position: absolute;
   top: 50%;
@@ -85,19 +117,31 @@ body {
   border: none;
   cursor: pointer;
   z-index: 10;
-  width: 40px;
-  height: 40px;
+  width: 150px;  /* viel größer */
+  height: 150px;
 }
 
 .arrow.left {
-  left: -60px;
+  left: -200px;
 }
 
 .arrow.right {
-  right: -60px;
+  right: -200px;
 }
 
 .arrow img {
   width: 100%;
   height: auto;
+}
+
+/* Seitenzähler */
+.counter {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-weight: 900;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  z-index: 15;
 }
