@@ -2,85 +2,81 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #000;
+  background-image: url("images/clouds_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .slider {
   position: relative;
   width: 390px;
   height: 700px;
-  overflow: hidden;
+  z-index: 1;
 }
 
 .card {
-  position: absolute;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 25px;
   width: 100%;
   height: 100%;
-  padding: 30px 20px;
-  border-radius: 25px;
-  border: 2px solid black;
-  background-color: #fff;
-  box-sizing: border-box;
+  overflow: hidden;
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 1;
 }
 
 .card.active {
   display: flex;
 }
 
-.card .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  border-radius: 25px;
-}
-
+/* 🥃 Drink-Bild */
 .card .drink {
-  width: 85%;
-  align-self: center;
-  margin-top: 40px;
+  width: 100%;
+  margin-top: -20px; /* damit es oben anschneidet */
   z-index: 2;
 }
 
-.card h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 24px;
-  color: #000;
+/* 🔴 Unterer Farbbereich mit Text */
+.card .info-box {
+  background-color: rgb(255, 0, 0);
+  padding: 30px 20px;
+  color: white;
   text-align: center;
-  margin: 20px 0 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
+/* 📝 Titel */
+.card h2 {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* 🧾 Beschreibung */
 .card p {
   font-weight: 300;
   font-size: 14px;
-  color: #000;
-  text-align: center;
-  margin: 0 20px 20px;
-  line-height: 1.4;
+  margin-bottom: 20px;
 }
 
+/* 🔗 Link */
 .card a {
   font-weight: 300;
   font-size: 14px;
-  color: #000;
+  color: white;
   text-decoration: underline;
-  text-align: center;
-  display: block;
-  margin-bottom: 40px;
 }
 
+/* ◀️▶️ Pfeile */
 .arrow {
   position: absolute;
   top: 50%;
@@ -93,15 +89,15 @@ body {
   height: 40px;
 }
 
-.arrow img {
-  width: 100%;
-  height: auto;
-}
-
 .arrow.left {
-  left: -20px;
+  left: -60px;
 }
 
 .arrow.right {
-  right: -20px;
+  right: -60px;
+}
+
+.arrow img {
+  width: 100%;
+  height: auto;
 }
