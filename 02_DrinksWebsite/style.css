@@ -107,7 +107,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Claim */
@@ -136,7 +136,7 @@ body {
 }
 
 /* Link */
-.card a {
+.card .some-other-link {
   font-weight: 300;
   font-size: 14px;
   color: white;
@@ -195,7 +195,17 @@ body {
 
 /* Card hover */
 .card.active:hover {
-  transform: scale(1.03);
+  transform: translateX(0) scale(1.03);
   transition: transform 0.3s ease;
   border: 1px solid black;
+}
+
+/* Recipe link */
+a.recipe-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card .info-box .recipe-link:hover {
+  text-decoration: underline;
 }
