@@ -209,3 +209,24 @@ a.recipe-link {
 .card .info-box .recipe-link:hover {
   text-decoration: underline;
 }
+
+/* Background animation*/
+body {
+  background-image: url('images/clouds_background.png');
+  background-repeat: no-repeat;
+  background-size: 130% auto;
+  background-position: center top;
+  animation: cloudDrift 60s ease-in-out infinite;
+}
+
+@keyframes cloudDrift {
+  0% {
+    background-position: 20% top;
+  }
+  50% {
+    background-position: 70% top;
+  }
+  100% {
+    background-position: 20% top;
+  }
+}
